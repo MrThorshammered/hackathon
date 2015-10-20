@@ -8,18 +8,21 @@ body {
 
 h1 {
   font-family: 'Sigmar One', cursive;
-  font-size: 150px;
+  font-size: 120px;
   margin-top: 10px;
   text-align: center;
   z-index: 10;
   color: white;
   margin-bottom: 0;
+  margin-top: 10px;
 }
 
 h3 {
   font-family: 'Sigmar One', cursive;
   font-size: 50px;
   color: white;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .country-title {
@@ -28,14 +31,15 @@ h3 {
 
 .country-data {
   width: 45%;
-  margin-left: -600px;
   display: inline-block;
   text-decoration: none;
 }
 
 .twitter-data {
 /*  width: 45%;*/
-  display: inline-block;
+/*  display: inline-block;*/
+  position: absolute;
+  right: 0;
 /*  border: 3px solid white;*/
 }
 
@@ -47,11 +51,16 @@ h3 {
 
 li {
   font-family: 'Sigmar One', cursive;
-  font-size: 80px;
   color: white;
-  font-size: 10px;
+  font-size: 20px;
 }
 
 ul {
   list-style-type: none;
+}
+
+.country-info {
+  position: absolute;
+  left: 0;
+  text-align: center;
 }

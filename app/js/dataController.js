@@ -7,13 +7,19 @@ function DataController($http) {
 
   var self = this;
 
-  self.all = [];
+  self.country;
+  self.trends;
+
 
   function getCountry() {
     $http
       .get('http://localhost:3000/countries')
       .then(function(response) {
-        self.all = response.data;
+        console.log(response.data);
+        console.log(typeof response.data);
+        
+        self.country = response.data.country;
+        self.trends = response.data.trends;
       })
   }
 
