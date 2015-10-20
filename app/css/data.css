@@ -7,20 +7,20 @@ body {
 }
 
 h1 {
-  font-family: 'Sigmar One', cursive;
+  font-family: 'Orbitron', sans-serif;
   font-size: 120px;
   margin-top: 10px;
   text-align: center;
   z-index: 10;
-  color: white;
+  color: #aaa;
   margin-bottom: 0;
   margin-top: 10px;
 }
 
 h3 {
-  font-family: 'Sigmar One', cursive;
+  font-family: 'Orbitron', sans-serif;
   font-size: 50px;
-  color: white;
+  color: #aaa;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -35,7 +35,7 @@ h3 {
   text-decoration: none;
 }
 
-.twitter-data {
+.fx-data {
 /*  width: 45%;*/
 /*  display: inline-block;*/
   position: absolute;
@@ -50,8 +50,8 @@ h3 {
 }
 
 li {
-  font-family: 'Sigmar One', cursive;
-  color: white;
+  font-family: 'Orbitron', sans-serif;
+  color: #aaa;
   font-size: 20px;
 }
 
@@ -60,7 +60,7 @@ ul {
 }
 
 .country-info {
-  position: absolute;
-  left: 0;
+/*  position: absolute;
+  left: 0;*/
   text-align: center;
 }
