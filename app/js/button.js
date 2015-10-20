@@ -4,9 +4,9 @@ $(document).ready(function() {
   // $('.shake').mouseover(function() {
   //   console.log('is this working?')
       $('#shake').jrumble({
-        x: 0,
-        y: 0,
-        rotation: 5
+        x: .5,
+        y: .5,
+        rotation: 1
       });
   // });
 

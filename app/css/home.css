@@ -24,3 +24,8 @@ img.bg {
   top: 0;
   left: 0;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
