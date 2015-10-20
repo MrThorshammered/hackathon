@@ -14,14 +14,10 @@
 </head>
 <body ng-controller="DataController as data">
 
-  <div class="country-title">
-    <h1>Country</h1>
-  </div>
-
 <div class="container" ng-repeat="country in data.all">
-  <div class="country-data">
-    <h3>{{ country.name }}</h3> 
-    <ul>
+  <div class="country-title">
+    <h1>{{ country.name }}</h1> 
+    <ul class="country-data">
       <li>Population: {{ country.population }}</li>
       <li>Region: {{ country.region }}</li>
       <li>Currency: {{ country.currency }}</li>
