@@ -8,18 +8,19 @@ function DataController($http) {
   var self = this;
 
   self.country;
-  self.trends;
-
+  self.trends=[];
+  self.fx;
 
   function getCountry() {
     $http
       .get('http://localhost:3000/countries')
       .then(function(response) {
         console.log(response.data);
-        console.log(typeof response.data);
+        console.log(response.data.trends);
         
         self.country = response.data.country;
-        self.trends = response.data.trends;
+        self.trends = response.data.trends.trends;
+        self.fx = response.data.fx;
       })
   }
 
