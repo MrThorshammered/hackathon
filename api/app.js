@@ -19,9 +19,9 @@ app.use('/events', express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false} ))
 app.use(bodyParser.json())
 
-// views setup/engine etc.
+
 app.set('view engine', 'ejs');
-//app.engine('ejs', require('ejs').renderFile);
+
 app.set('views', './views');
 app.use(ejsLayouts);
 
@@ -29,6 +29,10 @@ app.use(ejsLayouts);
 var routes = require('./config/routes');
 app.use(routes);
 
+
+app.listen(port, function() {
+  console.log('Server started listening on port ', port);
+});
 
 
 
