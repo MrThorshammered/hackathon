@@ -27,13 +27,13 @@
       </ul>
     </div>
   </div>
-</div>
-
-  <div class="twitter-container">
+    <div class="twitter-container">
+    <h3>Trending Tweets</h3>
     <ul>
-      <li>{{ data.trends.name }}</li>
+      <li ng-repeat="trend in data.trends">{{ trend.name }}</li>
     </ul>
   </div>
+</div>
 
 </body>
 </html>

@@ -8,7 +8,7 @@ function DataController($http) {
   var self = this;
 
   self.country;
-  self.trends;
+  self.trends=[];
   self.fx;
 
   function getCountry() {
@@ -19,7 +19,7 @@ function DataController($http) {
         console.log(response.data.trends);
         
         self.country = response.data.country;
-        self.trends = response.data.trends;
+        self.trends = response.data.trends.trends;
         self.fx = response.data.fx;
       })
   }
