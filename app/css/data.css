@@ -1,5 +1,5 @@
 body {
-    background-image: url(http://rachouanrejeb.be/weather/images/assets/stars.png);
+    background-image: url(http://rachouanrejeb.be/weather/images/assts/stars.png);
     background-size: 800px;
     background-position: top;
     background-repeat: repeat; 
@@ -13,4 +13,34 @@ h1 {
   text-align: center;
   z-index: 10;
   color: white;
+}
+
+h3 {
+  font-family: 'Sigmar One', cursive;
+  font-size: 30px;
+  z-index: 10;
+  color: white;
+}
+
+.country-data {
+  width: 45%;
+  display: inline-block;
+/*  border: 3px solid white;*/
+}
+
+.twitter-data {
+  width: 45%;
+  display: inline-block;
+/*  border: 3px solid white;*/
+}
+
+.container {
+  margin: 0 auto;
+  display: inline-block;
+  width: 1200px;
+}
+
+li {
+  color: white;
+  font-size: 10px;
 }
