@@ -9,8 +9,9 @@ var countrySchema = new mongoose.Schema({
     latitude: {type: Number}, 
     longitude: {type: Number}
   },
+  // latlng: [Number],
   currency: String,
-  languages: [{type: String}]
+  languages: [String]
 });
 
 module.exports = mongoose.model("Country", countrySchema);
