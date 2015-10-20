@@ -18,7 +18,8 @@ var countrySchema = new mongoose.Schema({
   },
   currency: String,
   languages: [String],
-  rank: Number
+  rank: Number,
+  woeid: Number
 });
 
 countrySchema.methods.getTrend = function(callback){
@@ -28,5 +29,6 @@ countrySchema.methods.getTrend = function(callback){
     callback(err, data);
   })
 };
+
 
 module.exports = mongoose.model("Country", countrySchema);
