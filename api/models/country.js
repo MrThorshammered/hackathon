@@ -1,4 +1,11 @@
 var mongoose = require("mongoose");
+var Twit = require("twit");
+var twitter = new Twit({
+    consumer_key:         process.env.TWITTER_CONSUMER_KEY, 
+    consumer_secret:      process.env.TWITTER_CONSUMER_SECRET, 
+    access_token:         process.env.TWITTER_ACCESS_TOKEN, 
+    access_token_secret:  process.env.TWITTER_ACCESS_TOKEN_SECRET
+});
 
 var countrySchema = new mongoose.Schema({
   name: String,
@@ -9,16 +16,20 @@ var countrySchema = new mongoose.Schema({
     latitude: {type: Number}, 
     longitude: {type: Number}
   },
-  // latlng: [Number],
   currency: String,
   languages: [String],
-  rank: Number
+  rank: Number,
+  woeid: Number
 });
 
-countrySchema.methods.getRandomCountry = function(){
-  rank = Math.floor(Math.random() * Country.find().count());
-  console.log(rank);
-  return Country.find({rank: rank});
-}
+countrySchema.methods.getTrend = function(callback){
+  var self = this;
+  twitter.get('trends/place', { id: self.woeid }, function (err, data, response) {
+    console.log(err)
+    console.log(data)
+    callback(err, data);
+  })
+};
+
 
 module.exports = mongoose.model("Country", countrySchema);
