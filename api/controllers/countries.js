@@ -2,21 +2,20 @@ var Country = require("../models/country.js");
 
 function index(req, res){
 
-  console.log("country count");
-
   Country.find().count()
   .exec(function(err, count){
-    console.log("country count");
-    console.log(typeof count);
-    console.log(count);
     var rank = Math.floor(Math.random() * Number(count));
-    console.log("this is the rank");
-    console.log(rank);
     Country.find({rank: rank}, function(err, country){
       if (err) console.log(err);
-      console.log("this is the random country: ");
-      console.log(country);
-      res.json(country);
+      console.log(typeof country);
+      country[0].getTrend(function(err, trends){
+        console.log("trends is: ")
+        console.log(trends)
+        console.log("this is: ");
+        console.log(country[0]);
+        res.json({country: country[0], trends: trends[0]});
+      });
+      // res.json(country);
     });
   });
 }
