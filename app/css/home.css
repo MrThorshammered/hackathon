@@ -1,7 +1,16 @@
+body {
+    background-image: url(http://rachouanrejeb.be/weather/images/assets/stars.png);
+    background-size: 800px;
+    background-position: top;
+    background-repeat: repeat; 
+    background-color: #185C69;
+}
+
 h1 {
   font-family: 'Sigmar One', cursive;
+  font-color: white;
   font-size: 80px;
-  margin-top: 280px;
+  margin-top: 350px;
   margin-left: 180px;
   z-index: 10;
 }
@@ -27,5 +36,6 @@ img.bg {
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
+
