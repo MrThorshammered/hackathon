@@ -23,7 +23,8 @@ var countrySchema = new mongoose.Schema({
 });
 
 countrySchema.methods.getTrend = function(callback){
-  twitter.get('trends/place', { id: 1 }, function (err, data, response) {
+  var self = this;
+  twitter.get('trends/place', { id: self.woeid }, function (err, data, response) {
     console.log(err)
     console.log(data)
     callback(err, data);
