@@ -14,25 +14,29 @@
 </head>
 <body ng-controller="DataController as data">
 
-<div class="container" ng-repeat="country in data.all">
+<div class="container">
   <div class="country-title">
-    <h1>{{ country.name }}</h1> 
+    <h1>{{ data.country.name }}</h1> 
+  <div class="country-info">
+    <h3>Country Information</h3>
     <ul class="country-data">
-      <li>Population: {{ country.population }}</li>
-      <li>Region: {{ country.region }}</li>
-      <li>Currency: {{ country.currency }}</li>
-      <li>Languages: {{ country.languages }}</li>
+      <li>Population: {{ data.country.population }}</li>
+      <li>Region: {{ data.country.region }}</li>
+      <li>Currency: {{ data.country.currency }}</li>
+      <li>Languages: {{ data.country.languages }}</li>
+    </ul>
+  </div>
+  </div>
+</div>
+
+  <div class="twitter-data" ng-repeat="trend in data.trends">
+    <h3>Twitter Trends</h3>
+    <ul>
+      <li>{{ trend.name }}</li>
+      <li></li>
     </ul>
   </div>
 
-  <div class="twitter-data">
-    <h3>Twitter Trends</h3>
-    <ul>
-      <li>Twitter Trends</li>
-      <li>Name</li>
-    </ul>
-  </div>
-</div>
 
 </body>
 </html>
