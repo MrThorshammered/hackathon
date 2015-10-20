@@ -1,4 +1,5 @@
 var mongoose = require("mongoose");
+var request = require("request");
 var Twit = require("twit");
 var twitter = new Twit({
     consumer_key:         process.env.TWITTER_CONSUMER_KEY, 
@@ -28,6 +29,18 @@ countrySchema.methods.getTrend = function(callback){
     console.log(err)
     console.log(data)
     callback(err, data);
+  })
+};
+
+countrySchema.methods.getFX = function(callback){
+  var self = this;
+  request('https://openexchangerates.org/api/latest.json?app_id=6f9f9fb6e5654626a3f2dc32b6085d75', function (err, data, response) {
+    if (err) console.log(err);
+    var gbpRate = JSON.parse(data.body).rates.GBP;
+    var currencyRate = JSON.parse(data.body).rates[self.currency];
+    var fx = (currencyRate/gbpRate).toFixed(2);
+    // console.log("fx inside getFX is " + fx);
+    callback(err, {rate: fx, currency: self.currency});
   })
 };
 
