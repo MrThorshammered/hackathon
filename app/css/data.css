@@ -5,3 +5,53 @@ body {
     background-repeat: repeat; 
     background-color: #185C69;
 }
+
+h1 {
+  font-family: 'Sigmar One', cursive;
+  font-size: 150px;
+  margin-top: 10px;
+  text-align: center;
+  z-index: 10;
+  color: white;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-family: 'Sigmar One', cursive;
+  font-size: 50px;
+  color: white;
+}
+
+.country-title {
+  margin: 0 auto;
+}
+
+.country-data {
+  width: 45%;
+  margin-left: -600px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.twitter-data {
+/*  width: 45%;*/
+  display: inline-block;
+/*  border: 3px solid white;*/
+}
+
+.container {
+  display: inline-block;
+  width: 1200px;
+  text-align: center;
+}
+
+li {
+  font-family: 'Sigmar One', cursive;
+  font-size: 80px;
+  color: white;
+  font-size: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
