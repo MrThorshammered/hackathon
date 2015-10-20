@@ -11,7 +11,14 @@ var countrySchema = new mongoose.Schema({
   },
   // latlng: [Number],
   currency: String,
-  languages: [String]
+  languages: [String],
+  rank: Number
 });
+
+countrySchema.methods.getRandomCountry = function(){
+  rank = Math.floor(Math.random() * Country.find().count());
+  console.log(rank);
+  return Country.find({rank: rank});
+}
 
 module.exports = mongoose.model("Country", countrySchema);

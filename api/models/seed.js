@@ -18,8 +18,8 @@ request('https://restcountries.eu/rest/v1/all', function (error, response, body)
           latitude: countries[i].latlng[0] || null,
           longitude: countries[i].latlng[1] || null
         },
-        // latlng: countries[i].latlng,
-        languages: countries[i].languages || null
+        languages: countries[i].languages || null,
+        rank: i
       };
       Country.create(newCountry, function(err, createdCountry){
         if (err) console.log(err);
